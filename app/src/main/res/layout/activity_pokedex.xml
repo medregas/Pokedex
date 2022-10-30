@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Pokedex">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/componentesContainer"
+        style="@style/ComponentesContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        style="@style/Edit_Text"
+        android:hint="Nome do Pokémon"
+        android:drawableRight="@drawable/ic_nome"
+        app:layout_constraintStart_toStartOf="@+id/componentesContainer"
+        app:layout_constraintEnd_toEndOf="@+id/componentesContainer"
+        app:layout_constraintTop_toTopOf="@+id/componentesContainer" />
+
+    <EditText
+        android:id="@+id/edit_tipo"
+        style="@style/Edit_Text"
+        android:hint="Elemento do Pokémon"
+        android:drawableRight="@drawable/ic_tipo"
+        app:layout_constraintStart_toStartOf="@+id/componentesContainer"
+        app:layout_constraintEnd_toEndOf="@+id/componentesContainer"
+        app:layout_constraintTop_toBottomOf="@id/edit_nome" />
+
+    <EditText
+        android:id="@+id/edit_genero"
+        style="@style/Edit_Text"
+        android:hint="Gênero do Pokémon"
+        android:drawableRight="@drawable/ic_genero"
+        app:layout_constraintStart_toStartOf="@+id/componentesContainer"
+        app:layout_constraintEnd_toEndOf="@+id/componentesContainer"
+        app:layout_constraintTop_toBottomOf="@id/edit_tipo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/salvarBT"
+        android:onClick="salvar"
+        android:text="@string/salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/componentesContainer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_segunda_tela"
+        style="@style/telaBT"
+        android:layout_marginStart="351dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/componentesContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
